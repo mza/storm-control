@@ -109,11 +109,3 @@ img {
 .stripNavR {
 	right: 0;
 }
-
-.stripNavL {
-	background: url("images/arrow-left.gif") no-repeat center;
-}
-
-.stripNavR {
-	background: url("images/arrow-right.gif") no-repeat center;
-}

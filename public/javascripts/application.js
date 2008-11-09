@@ -26,9 +26,13 @@ jQuery(window).bind("load", function() {
 		if (statusValues.get(nextPanel).value == "1") {
 /*			statusLabels.get(nextPanel).innerHTML = "OH YEAH - PASS";*/
 			body.animate({ backgroundColor: "#282828" }, 'slow');
+			$('div#title').animate({ color: "#7ACAE9" }, 'slow');
+			$('td.pass').animate({ color: "#2C9927" }, 'slow');
 		} else {
 /*			statusLabels.get(nextPanel).innerHTML = "OH NO - FAIL";	*/
 			body.animate({ backgroundColor: "#67040C" }, 'slow');
+			$('div#title').animate({ color: "#f00" }, 'slow');
+			$('td.pass').animate({ color: "#800" }, 'slow');
 		}
 		
 		var change = - (panelWidth * (nextPanel));
