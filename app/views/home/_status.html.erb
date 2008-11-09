@@ -1,0 +1,12 @@
+<table width='100%'>
+  <tr>
+  <% for build in builds %>
+    <td class='<%= build_class build %>'><%= build.name %></td>
+  <% end %>
+  </tr>
+  <tr>
+  <% for build in builds %>
+    <td class='<%= build_class build %>'><%= build.status %></td>
+  <% end %>
+  </tr>
+</table>

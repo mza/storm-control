@@ -1,0 +1,16 @@
+<div class="panel" title="<%= build.name %>">
+	<div class="wrapper">
+	  <%= build.name %><br /><br />
+    <% if build.pass? %>
+    <div class='build_status pass'>
+    PASS
+    </div>
+    <% else %>
+    <div class='build_status fail'>
+    FAIL
+    </div>
+    <% end %>
+    <br />
+    <%= build.date.to_formatted_s :long %>
+	</div>
+</div>
