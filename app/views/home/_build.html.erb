@@ -1,13 +1,15 @@
 <div class="panel" title="<%= build.name %>">
 	<div class="wrapper">
 	  <%= build.name %><br /><br />
-    <% if build.pass? %>
+    <% if build.pass? && build.name != "Plumbing" %>
     <div class='build_status pass'>
     PASS
+    <input type='hidden' class='build_status' value="1" />
     </div>
     <% else %>
     <div class='build_status fail'>
     FAIL
+    <input type='hidden' class='build_status' value="0" />
     </div>
     <% end %>
     <br />
