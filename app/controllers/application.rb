@@ -12,8 +12,20 @@ class ApplicationController < ActionController::Base
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
+    
+  def settings
+    SETTINGS
+  end
   
-  settings = YAML.load(File.open("#{Rails.root}/config/cruise.yml")).symbolize_keys
-  CruiseControl.url = settings[:url]
+  def setting_for(key)
+    SETTINGS[key]
+  end
+  
+  def self.setting_for(key)
+    SETTINGS[key]
+  end
+
+  SETTINGS = YAML.load(File.open("#{Rails.root}/config/cruise.yml")).symbolize_keys
+  CruiseControl.url = setting_for :url 
   
 end
